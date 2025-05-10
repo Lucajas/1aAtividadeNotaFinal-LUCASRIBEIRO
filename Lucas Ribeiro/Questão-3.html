@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário de Contato</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 220px;
+    }
+
+    .container {
+      background: #fcf3ff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px 30px;
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #9900ff;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #fcf3ff;
+      border-radius: 4px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #9900ff;
+      color: #ffffff;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #63a8f8; /* Mesma função de passar o mouse em cima do item e mudar a cor. */
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .error {
+      color: #ff0000;
+    }
+
+    .success {
+      color: #01ad01;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Formulário de Contato</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Nome">
+      <input type="email" id="email" placeholder="Email">
+      <input id="message" rows="4" placeholder="Sua mensagem...">
+      <button type="submit">Enviar</button>
+      <div class="message" id="formMessage"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const msgDiv = document.getElementById("formMessage");
+
+      const emailRegex = /^[^@\s]+@[^@\s]+\.[^@\s]+$/; /*Regular expression para validar email, simples. Site que usei como referência: https://platform.text.com/tools/regex-builder  */ 
+
+      if (!name || !email || !message) {
+        msgDiv.textContent = "Todos os campos devem ser preenchidos.";
+        msgDiv.className = "message error";
+      } else if (!emailRegex.test(email)) {
+        msgDiv.textContent = "E-mail inválido.";
+        msgDiv.className = "message error";
+      } else {
+        msgDiv.textContent = "Mensagem enviada com sucesso!";
+        msgDiv.className = "message success";
+
+      }
+    });
+  </script>
+
+</body>
+</html>

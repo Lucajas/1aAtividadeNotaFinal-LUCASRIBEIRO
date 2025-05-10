@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabela de Produtos</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background-color: #7700ff;
+            color: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #7700ff;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #dddcdc;
+        }
+
+        tbody tr:hover {
+            background-color: #dfa2ee; /* Função para mudar a cor dos itens da tabela quando passar o mouse em cima, anotando pois achei interessante. */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tabela de Compras</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Produto</th>
+                <th>Descrição</th>
+                <th>Categoria</th>
+                <th>Preço (R$)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Monitor</td>
+                <td>Odyssey G40 27" FHD, 240Hz, 1ms, Ajuste De Altura, Hdmi, Dp, Gsync, Freesync</td>
+                <td>Perífericos</td>
+                <td>1.563,08</td>
+            </tr>
+            <tr>
+                <td>Placa de Vídeo</td>
+                <td>RTX 4060 VENTUS 2x Black OC MSI NVIDIA GeForce, 8GB GDDR6, DLSS, Ray Tracing</td>
+                <td>Informática</td>
+                <td>2.499,99</td>
+            </tr>
+            <tr>
+                <td>Fonte</td>
+                <td>MSI MAG A850GL, 850W, 80 Plus Gold, Modular, PFC Ativo</td>
+                <td>Informática</td>
+                <td>689,99</td>
+            </tr>
+            <tr>
+                <td>Teclado</td>
+                <td>Logitech G PRO X TKL RAPID, Switches Magnético-analógicos</td>
+                <td>Acessórios</td>
+                <td>1.189,99</td>
+            </tr>
+            <tr>
+                <td>Mouse</td>
+                <td>Logitech G Pro X Superlight 2 com Lightspeed, 32000 DPI, Sensor Hero 2</td>
+                <td>Acessórios</td>
+                <td>1.199,99</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

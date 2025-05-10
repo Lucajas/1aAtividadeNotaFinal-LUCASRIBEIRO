@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Perfil pessoal">
+    <meta name="author" content="Lucas Ribeiro">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Pessoal</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; /* Fui digianto qualquer coisa para achar uma fonte legal, digitei "be" e apertei tab, o visual studio completou a síntaxe, como gostei acabei de deixando, porém não sei se tem coisa demais na síntaxe. */
+            background-color: #464646;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120vh;
+        }
+
+        .card {
+            background: #fcf3ff;
+            padding: 30px;
+            border-radius: 50px;
+            box-shadow: 10 4px 8px #1b1c3b1a;
+            text-align: center;
+            max-width: 700px;
+        }
+
+        .foto {
+            width: 150px;
+            height: 150px;
+            border-radius: 70%;
+            object-fit: contain;
+            margin: 0 auto 20px;
+            display: block;
+        }
+
+
+
+        h1 {
+            color: #9900ff;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #1b1b1b;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .badges span {
+            display: inline-block;
+            background-color: #9900ff;
+            color: #fff;
+            padding: 6px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .links a {
+            margin: 0 20px;
+            color: #4f769c;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .matricula {
+            font-size: 14px;
+            color: #383838;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img class="foto" src= "https://i.imgur.com/FMhi7n4.jpeg" alt="Foto de perfil">
+        <h1>Lucas Ribeiro</h1>
+        <h2>Ciência da Computação</h2>
+            <div 
+            class="matricula">Matrícula: 202402452215    
+            </div>
+        <p>Sou estudante da Estácio, entusiasmado para aprender sobre segurança e desenvolvimento de sistemas. Busco iniciar minha carreira como desenvolvedor Full Stack, atuando com .NET, Angular e SQL. Meu objetivo é trabalhar com Segurança da informação ou Arquitetura de Software.</p>
+            <div class="badges">
+                <span>.NET</span>
+                <span>C#</span>
+                <span>Angular</span>
+                <span>SQL</span>
+            </div>
+        <div class="links">
+            <a href="https://www.linkedin.com/in/lucas-ribeiro-pereira-217a7a221/">LinkedIn</a>
+            <a href="https://github.com/Lucajas">GitHub</a>
+        </div>
+        
+    </div>
+</body>
+</html>
